@@ -132,6 +132,14 @@ html:not(.js) .tabs{display:none}
 .warn.amber{border-left-color:var(--amber)}
 .warn b{display:block;margin-bottom:2px}
 
+/* timetable */
+.tt{margin-top:8px;font-size:.85rem}
+.tt summary{cursor:pointer;font-weight:700;font-size:.85rem}
+.tt .times{display:flex;flex-wrap:wrap;gap:4px 6px;margin:6px 0 2px}
+.tt .times span{font-variant-numeric:tabular-nums;border:1px solid var(--rule);border-radius:4px;padding:0 6px;background:var(--card)}
+.tt .times span.pick{border-color:var(--lantern);color:var(--lantern);font-weight:700}
+.tt p{margin:4px 0 0;color:var(--muted);font-size:.8rem}
+
 /* prep */
 .check{list-style:none;padding:0;margin:0 0 28px}
 .check li{border-bottom:1px solid var(--rule)}
@@ -186,16 +194,16 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     </div>
   </div>
 
-  <div class="alert"><b>🌀 台風「薔琵」接近中（10/20時点）</b>23日が最接近で、23〜24日は北部と宜蘭で大雨や豪雨のおそれ。進路はやや東寄りに修正され、上陸の可能性は下がっている。25日（日）は雨がはっきり弱まる見込み。往路便（10/23夜）は遅延・欠航の可能性があるので、Peachの運航状況をこまめに確認。</div>
+  <div class="alert"><b>🌀 台風「薔琵」接近中（10/21時点）</b>上陸の可能性は低いが、23日（金）に台湾の北東の海上を通って最接近。23日から24日の朝が風雨のピークで、北部・宜蘭は大雨のおそれ。24日の午後から遠ざかる。往路便（10/23 21:50発、24日0:40着）はピークの時間帯と重なるので、遅延・欠航の可能性が高め。Peachの運航状況をこまめに確認。</div>
 
-  <div class="wx-head"><h2>行き先の天気</h2><span>10/20時点</span></div>
+  <div class="wx-head"><h2>行き先の天気</h2><span>10/21時点</span></div>
   <ul class="wx">
-    <li><span class="d">24日（土）<small>台北</small></span><span class="c">🌧️ 雨・強風</span><span class="t">24〜30℃</span><a href="https://tenki.jp/world/5/88/58968/" target="_blank" rel="noopener">予報</a></li>
+    <li><span class="d">24日（土）<small>台北</small></span><span class="c">🌧️ 雨・強風（午後から回復へ）</span><span class="t">涼しめ</span><a href="https://tenki.jp/world/5/88/58968/" target="_blank" rel="noopener">予報</a></li>
     <li><span class="d">25日（日）昼<small>宜蘭（カバラン）</small></span><span class="c">🌦️ 曇り時々にわか雨</span><span class="t">23〜30℃</span><a href="https://www.twipcam.com/weather?town=10002010" target="_blank" rel="noopener">予報</a></li>
     <li><span class="d">25日（日）夕方<small>九份</small></span><span class="c">🌫️ 雨や霧が残りやすい</span><span class="t">やや涼しい</span><a href="https://www.cwa.gov.tw/V8/C/L/Street/Street.html?PID=S001" target="_blank" rel="noopener">予報</a></li>
     <li><span class="d">26日（月）<small>台北</small></span><span class="c">⛅ 曇りときどきにわか雨</span><span class="t">23〜31℃</span><a href="https://tenki.jp/world/5/88/58968/" target="_blank" rel="noopener">予報</a></li>
   </ul>
-  <p class="wx-note">昼は夏のように暑く、雨具は必須。九份の予報リンクは台湾の気象署（中国語）の「九份老街」地点予報。</p>
+  <p class="wx-note">雨具は必須。東北季風と台風の影響で、北部は21℃前後まで下がる見込みなので、羽織るものを。九份の予報リンクは台湾の気象署（中国語）の「九份老街」地点予報。</p>
 </header>
 
 <div class="tabs" role="tablist" aria-label="日程">
@@ -231,14 +239,20 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
       <div class="time"></div><div class="rail"></div>
       <div class="body">
         <span class="chip">🚌 國光客運 1819</span>
-        <p class="how">T1地下1階のバス乗り場から「臺北轉運站」行きに乗る。終点まで約50〜60分、140元。<br><span>深夜も約10〜30分おきに出ている。悠遊卡をタッチするか、乗り場の券売機で切符を買う。途中の停留所では降りず、終点まで乗る。</span></p>
+        <p class="how">T1地下1階の「客運巴士（バス乗り場）」から「臺北轉運站」行きに乗る。終点まで約55分、140元。<br><span>到着ロビーから「Bus」の案内に沿ってエスカレーターで地下1階へ。乗り場の番号は変わることがあるので、「1819」の表示を探して並ぶ。悠遊卡をタッチするか、B1の國光客運カウンターで切符を買う。途中の停留所では降りず、終点まで乗る。</span></p>
+        <details class="tt"><summary>深夜の時刻表（第2ターミナル発）</summary>
+          <div class="times"><span>0:50</span><span>1:05</span><span>1:20</span><span class="pick">1:40</span><span class="pick">1:50</span><span>2:00</span><span>2:30</span><span>2:50</span><span>3:10</span></div>
+          <p>第1ターミナルはこの数分後に通る。2026年春の時刻表なので、当日は現地の表示で確認。入国と両替を済ませて1:40か1:50発に乗れれば理想。</p>
+        </details>
+        <div class="links"><a href="https://www.google.com/maps/search/?api=1&query=桃園機場第一航廈 客運巴士候車區" target="_blank" rel="noopener">乗り場の地図</a><a href="https://web.taoyuan-airport.com/buses" target="_blank" rel="noopener">空港のバス案内（公式）</a></div>
       </div>
     </li>
     <li class="row stop">
       <div class="time">2:40頃</div><div class="rail"></div>
       <div class="body">
         <h3>臺北轉運站（終点）</h3>
-        <p>台北駅の北隣のバスターミナル。25日に宜蘭行きのバスに乗るのもここ。</p>
+        <p>台北駅の北隣のバスターミナルで、バスは4階に着く。エレベーターかエスカレーターで1階へ降りて外へ。25日に宜蘭行きのバスに乗るのもここ。</p>
+        <div class="links"><a href="https://www.google.com/maps/search/?api=1&query=臺北轉運站" target="_blank" rel="noopener">地図</a></div>
       </div>
     </li>
     <li class="row leg taxi">
@@ -253,7 +267,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
       <div class="time">3:00頃</div><div class="rail"></div>
       <div class="body">
         <h3>ホテル着・就寝</h3>
-        <p>Giant Rich King Plaza Hotel（南京西路163号 3F）。10/23泊を含む予約です。</p>
+        <p>柜富賓王旅店-台北館（Giant Rich King Plaza Hotel、南京西路163號3樓）。10/23泊を含む予約。フロントは24時間対応。</p>
       </div>
     </li>
     <li class="row leg walk">
@@ -400,23 +414,29 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row stop">
       <div class="time">10:15</div><div class="rail"></div>
       <div class="body">
-        <h3>台北轉運站</h3>
+        <h3>台北轉運站 4階 12〜14番乗り場</h3>
+        <p>葛瑪蘭客運の乗り場は4階。京站（ショッピングモール）と同じビルで、エスカレーターかエレベーターで4階へ上がる。</p>
         <div class="links"><a href="https://www.google.com/maps/search/?api=1&query=台北轉運站" target="_blank" rel="noopener">地図</a></div>
       </div>
     </li>
     <li class="row leg bus">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚌 葛瑪蘭客運 1915</span>
-        <p class="how">台北轉運站 → 宜蘭轉運站。約1時間。<br><span>本数は多め。悠遊卡か窓口で乗車券を。</span></p>
+        <span class="chip">🚌 葛瑪蘭客運 1916（宜蘭直達）</span>
+        <p class="how">台北轉運站 → 宜蘭轉運站。約70分、140元前後。10:20か10:35発が目安。<br><span>1915番は連休中に礁溪止まりになることがあるので、宜蘭直行の1916番に乗る。悠遊卡か窓口で乗車券を。</span></p>
+        <details class="tt"><summary>時刻表（台北轉運站発・目安）</summary>
+          <div class="times"><span>9:40</span><span>10:00</span><span class="pick">10:20</span><span class="pick">10:35</span><span>10:50</span><span>11:05</span></div>
+          <p>連休中は臨時便が出ることもある。最新は葛瑪蘭客運の公式サイトか現地の表示で確認。</p>
+        </details>
+        <div class="links"><a href="https://kamalan.com.tw/run_5.php" target="_blank" rel="noopener">時刻表（公式）</a></div>
       </div>
     </li>
     <li class="row stop">
       <div class="time">11:30</div><div class="rail"></div>
       <div class="body">
         <h3>宜蘭轉運站・宜蘭駅周辺でランチ</h3>
-        <p>宜蘭はネギの名産地。ねぎ餅やネギ料理を。12:30には蒸留所へ出発。</p>
-        <div class="links"><a href="https://www.google.com/maps/search/?api=1&query=宜蘭車站" target="_blank" rel="noopener">地図</a></div>
+        <p>宜蘭はネギの名産地。ねぎ餅やネギ料理を。12:30には蒸留所へ出発。宜蘭轉運站は宜蘭駅のすぐ近く。</p>
+        <div class="links"><a href="https://www.google.com/maps/search/?api=1&query=宜蘭轉運站" target="_blank" rel="noopener">宜蘭轉運站の地図</a><a href="https://www.google.com/maps/search/?api=1&query=宜蘭車站" target="_blank" rel="noopener">宜蘭駅の地図</a></div>
       </div>
     </li>
     <li class="row leg taxi">
@@ -628,16 +648,17 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
 
   <h3 class="sec">🟡 重要</h3>
   <ul class="check">
-    <li><label><input type="checkbox" data-k="net"><span>ネット回線（eSIM・SIM・ローミング）<small>地図とこのサイトを見るのに必須。</small></span></label></li>
+    <li><label><input type="checkbox" data-k="net"><span>eSIM（simless 台湾3日間・完全無制限）<small>3人それぞれ用意するか、テザリングで共有。SIMロック解除済みか確認。QRコードのインストールは出発前に済ませ、eSIMの回線をオンにするのは桃園に着いてから（日本でつなぐと使える日数が減るおそれ）。台湾ではeSIM回線のデータローミングをオン、日本の回線のデータ通信はオフ。データ専用で電話番号はないので、電話はLINEなどで。つながらないときはショップのLINE相談へ。</small></span></label></li>
     <li><label><input type="checkbox" data-k="batt"><span>モバイルバッテリー<small>機内持ち込みのみ、1人2個まで、機内での使用・充電は禁止。</small></span></label></li>
     <li><label><input type="checkbox" data-k="chg"><span>充電器・ケーブル・延長タップ<small>プラグは日本のものがそのまま使える。</small></span></label></li>
     <li><label><input type="checkbox" data-k="med"><span>常備薬・海外旅行保険<small>クレカ付帯の保険で足りるかも確認。</small></span></label></li>
+    <li><label><input type="checkbox" data-k="atm"><span>キャッシングの準備<small>カードにキャッシング枠があるか、暗証番号（4桁）を覚えているか確認。JCBの人は、台湾で使えるATMをカード会社に確認。</small></span></label></li>
     <li><label><input type="checkbox" data-k="easy"><span>悠遊卡（EasyCard）<small>空港やコンビニで買えてチャージもできる。MRT、バス、台鉄の区間車で使える。</small></span></label></li>
   </ul>
 
   <h3 class="sec">📋 予約・手配</h3>
   <ul class="check">
-    <li><label><input type="checkbox" data-k="hotel"><span>ホテル予約が10/23泊からになっているか確認<small>深夜2時頃に着く旨を連絡しておく。</small></span></label></li>
+    <li><label><input type="checkbox" data-k="hotel"><span>ホテル予約が10/23泊からになっているか確認<small>深夜3時頃に着く旨を連絡し、時間外チェックインの追加料金がないか確認（電話 02-2558-2255）。</small></span></label></li>
     <li><label><input type="checkbox" data-k="bag"><span>復路MM628に預け荷物を追加<small>Peachのサイトで事前購入（空港より安い）。</small></span></label></li>
     <li><label><input type="checkbox" data-k="tra"><span>25日 宜蘭→瑞芳の自強号を予約<small>台鉄の公式サイトやアプリ「台鐵e訂通」で。15:00前後の、瑞芳に停まる便。連休で売り切れやすいので早めに。</small></span></label></li>
     <li><label><input type="checkbox" data-k="diy"><span>カバランの13:00見学の予約を確認</span></label></li>
@@ -646,6 +667,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
   <h3 class="sec">🟢 荷物まわり（Peach対策）</h3>
   <ul class="check">
     <li><label><input type="checkbox" data-k="liq"><span>洗面用具は100ml以下の容器に<small>往路は預け荷物がないので、液体はすべて機内持ち込み。透明な袋にまとめる。</small></span></label></li>
+    <li><label><input type="checkbox" data-k="brush"><span>歯ブラシ・歯磨き粉・カミソリなど<small>2025年から台湾のホテルは使い捨てアメニティを客室に置いていない（必要ならフロントで相談）。シャンプー類は備え付けがあるか未確認なので、気になる人は100ml以下で持参。コンビニでも買える。</small></span></label></li>
     <li><label><input type="checkbox" data-k="wrap"><span>ウイスキー用の梱包材<small>プチプチや衣類で包めるように。復路は誰か1人のバッグを預け荷物にまとめる。</small></span></label></li>
   </ul>
 
@@ -660,7 +682,11 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
   <h3 class="sec">お金・支払い</h3>
   <ul class="rules">
     <li>両替は着いてすぐ桃園空港で。10/24〜26は土日と連休で、市内の銀行は開いていない。成田はレートが悪いので、両替しなくてOK（お守りに少額なら可）。</li>
-    <li>目安は1人5,000〜8,000元（約2.5〜4万円）。足りなくなったらコンビニATMでキャッシング。</li>
+    <li>目安は1人5,000〜8,000元（約2.5〜4万円）。</li>
+    <li>足りなくなったら、コンビニやMRT駅のATM（ほぼ24時間）で、クレジットカードのキャッシングか海外対応のデビットカードで台湾ドルを引き出せる。連休で銀行が休みでもATMは使える。</li>
+    <li>ATMで確実なのはVisaとMastercard（カード裏のPLUS・Cirrusマーク）。JCBはキャッシングに対応したATMが限られるので、出発前にカード会社に確認。</li>
+    <li>ATMは英語（日本語対応のものも）に切り替えられる。お金とカードの取り忘れに注意。</li>
+    <li>キャッシングは利息がかかるので、帰国後すぐに繰上げ返済すると安く済む。</li>
     <li>現金が必要：夜市の屋台、小さな食堂、タクシー。</li>
     <li>カードが使える：ホテル、デパート、コンビニ、101展望台、カバランのショップなど。</li>
     <li>JCBも使える。台北MRTと桃園空港MRTは、JCBのタッチ決済で改札を通れる（2026年7月から）。ただし悠遊卡の乗り継ぎ割引などは付かない。</li>
@@ -675,6 +701,13 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li>ベッド脇のコンセントが少ないことが多いので、3人分の充電には延長タップが便利。</li>
   </ul>
 
+  <h3 class="sec">ホテルの設備</h3>
+  <ul class="rules">
+    <li>ある：タオル（大小）、ヘアドライヤー、スリッパ、電気ポット、冷蔵庫、エアコン、テレビ、無料Wi-Fi。部屋によってはバスタブ付き。</li>
+    <li>ない：歯ブラシ、歯磨き粉、カミソリ、シャワーキャップ、くし、小分けボトルのシャンプー類（2025年から台湾の方針で客室に置いていない）。パジャマも記載なし。</li>
+    <li>コインランドリー（洗濯機・乾燥機）と、有料の洗濯サービスあり。</li>
+  </ul>
+
   <h3 class="sec">荷物のルール</h3>
   <ul class="rules">
     <li>機内持ち込みは1人2個・合計7kgまで。空港の免税店で買ったものも含む。</li>
@@ -685,8 +718,9 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
 
   <h3 class="sec">タクシーで見せる住所</h3>
   <ul class="addr">
-    <li><div class="ja">ホテル</div><div class="zh">台北市大同區南京西路163號<small>Giant Rich King Plaza Hotel（3F）</small></div></li>
+    <li><div class="ja">ホテル（三重にある同系列の別ホテルと間違えないよう、住所も一緒に見せる）</div><div class="zh">柜富賓王旅店-台北館<small>台北市大同區南京西路163號3樓</small><small><a href="tel:+886225582255">02-2558-2255</a></small></div></li>
     <li><div class="ja">カバラン蒸留所</div><div class="zh">金車噶瑪蘭威士忌酒廠<small>宜蘭縣員山鄉員山路二段326號</small></div></li>
+    <li><div class="ja">バスターミナル（台北駅の北隣）</div><div class="zh">臺北轉運站<small>台北市大同區市民大道一段209號</small></div></li>
     <li><div class="ja">宜蘭駅</div><div class="zh">宜蘭車站</div></li>
     <li><div class="ja">九份</div><div class="zh">九份老街</div></li>
     <li><div class="ja">瑞芳駅</div><div class="zh">瑞芳車站</div></li>
