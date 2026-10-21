@@ -118,6 +118,7 @@ html:not(.js) .tabs{display:none}
 .chip{display:inline-block;background:var(--c);color:var(--chip-ink);font-weight:700;font-size:.82rem;padding:2px 9px;border-radius:4px;line-height:1.6}
 .leg.taxi .chip{color:var(--taxi-ink)}
 .leg.walk .chip{background:none;color:var(--muted);border:1px solid var(--rule);padding:1px 8px}
+.fare{display:inline-block;margin-left:8px;font-size:.75rem;color:var(--muted);font-variant-numeric:tabular-nums;vertical-align:middle}
 .leg .how{font-size:.9rem;margin:6px 0 0;color:var(--ink)}
 .leg .how span{color:var(--muted)}
 .m-green{--c:var(--m-green)} .m-red{--c:var(--m-red)} .m-blue{--c:var(--m-blue)} .m-air{--c:var(--m-air)}
@@ -238,7 +239,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg bus">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚌 國光客運 1819</span>
+        <span class="chip">🚌 國光客運 1819</span><span class="fare">140元</span>
         <p class="how">T1地下1階の「客運巴士（バス乗り場）」から「臺北轉運站」行きに乗る。終点まで約55分、140元。<br><span>到着ロビーから「Bus」の案内に沿ってエスカレーターで地下1階へ。乗り場の番号は変わることがあるので、「1819」の表示を探して並ぶ。悠遊卡をタッチするか、B1の國光客運カウンターで切符を買う。途中の停留所では降りず、終点まで乗る。</span></p>
         <details class="tt"><summary>深夜の時刻表（第2ターミナル発）</summary>
           <div class="times"><span>0:50</span><span>1:05</span><span>1:20</span><span class="pick">1:40</span><span class="pick">1:50</span><span>2:00</span><span>2:30</span><span>2:50</span><span>3:10</span></div>
@@ -258,7 +259,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg taxi">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚕 タクシー 約5分</span>
+        <span class="chip">🚕 タクシー 約5分</span><span class="fare">約100〜130元/台（深夜加算込み）</span>
         <p class="how">ホテルへ。徒歩なら約15分。<br><span>「準備」タブの住所を運転手に見せる。</span></p>
         <div class="links"><a href="https://www.google.com/maps/dir/?api=1&origin=臺北轉運站&destination=台北市大同區南京西路163號&travelmode=walking" target="_blank" rel="noopener">経路を開く</a></div>
       </div>
@@ -289,7 +290,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg m-green">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚇 MRT 緑線 → 赤線</span>
+        <span class="chip">🚇 MRT 緑線 → 赤線</span><span class="fare">20元</span>
         <p class="how">北門駅（徒歩約10分）→ 中正紀念堂駅（緑線3駅）で赤線に乗り換え → 東門駅（1駅）。<br><span>緑線は新店方面、赤線は象山方面行き。</span></p>
         <div class="links"><a href="https://www.google.com/maps/dir/?api=1&origin=迪化街&destination=永康街&travelmode=transit" target="_blank" rel="noopener">経路を開く</a></div>
       </div>
@@ -308,7 +309,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg taxi">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚕 タクシー 約10分</span>
+        <span class="chip">🚕 タクシー 約10分</span><span class="fare">約150〜200元/台</span>
         <p class="how">永康街 → 華山1914文創園區。</p>
       </div>
     </li>
@@ -323,7 +324,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg m-blue">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚇 MRT 青線（板南線）</span>
+        <span class="chip">🚇 MRT 青線（板南線）</span><span class="fare">20元</span>
         <p class="how">忠孝新生駅（徒歩約5分）→ 市政府駅。4駅、乗換えなし。降りたら徒歩約10分。<br><span>南港展覽館方面行きに乗る。</span></p>
         <div class="links"><a href="https://www.google.com/maps/dir/?api=1&origin=華山1914文化創意產業園區&destination=台北101&travelmode=transit" target="_blank" rel="noopener">経路を開く</a></div>
       </div>
@@ -339,7 +340,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg m-red">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚇 MRT 赤線（淡水信義線）</span>
+        <span class="chip">🚇 MRT 赤線（淡水信義線）</span><span class="fare">30元</span>
         <p class="how">台北101/世貿駅 → 劍潭駅。乗換えなし、約25分。<br><span>淡水方面行きに乗る。士林夜市は「士林」駅ではなく「劍潭」駅で降りる。</span></p>
         <div class="links"><a href="https://www.google.com/maps/dir/?api=1&origin=台北101&destination=士林夜市&travelmode=transit" target="_blank" rel="noopener">経路を開く</a></div>
       </div>
@@ -359,7 +360,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg m-red">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚇 MRT 赤線（淡水信義線）</span>
+        <span class="chip">🚇 MRT 赤線（淡水信義線）</span><span class="fare">20元</span>
         <p class="how">劍潭駅 → 雙連駅。3駅、乗換えなし。降りたら徒歩約10分。<br><span>象山方面行きに乗る。</span></p>
         <div class="links"><a href="https://www.google.com/maps/dir/?api=1&origin=士林夜市&destination=台北市大同區南京西路163號&travelmode=transit" target="_blank" rel="noopener">経路を開く</a></div>
       </div>
@@ -387,7 +388,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg m-green">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚇 MRT 緑線（松山新店線）</span>
+        <span class="chip">🚇 MRT 緑線（松山新店線）</span><span class="fare">20元</span>
         <p class="how">北門駅（徒歩約10分）→ 中正紀念堂駅。3駅、乗換えなし。<br><span>新店方面行きに乗る。</span></p>
         <div class="links"><a href="https://www.google.com/maps/dir/?api=1&origin=台北市大同區南京西路163號&destination=中正紀念堂&travelmode=transit" target="_blank" rel="noopener">経路を開く</a></div>
       </div>
@@ -406,7 +407,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg m-red">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚇 MRT 赤線（淡水信義線）</span>
+        <span class="chip">🚇 MRT 赤線（淡水信義線）</span><span class="fare">20元</span>
         <p class="how">中正紀念堂駅 → 台北車站駅。2駅、乗換えなし。<br><span>淡水方面行きに乗る。台北轉運站は台北駅の北隣、京站と一体のビルで、駅から徒歩約10分。</span></p>
         <div class="links"><a href="https://www.google.com/maps/dir/?api=1&origin=中正紀念堂&destination=台北轉運站&travelmode=transit" target="_blank" rel="noopener">経路を開く</a></div>
       </div>
@@ -422,8 +423,8 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg bus">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚌 葛瑪蘭客運 1916（宜蘭直達）</span>
-        <p class="how">台北轉運站 → 宜蘭轉運站。約70分、140元前後。10:20か10:35発が目安。<br><span>1915番は連休中に礁溪止まりになることがあるので、宜蘭直行の1916番に乗る。悠遊卡か窓口で乗車券を。</span></p>
+        <span class="chip">🚌 葛瑪蘭客運 1916（宜蘭直達）</span><span class="fare">約130〜140元</span>
+        <p class="how">台北轉運站 → 宜蘭轉運站。約70分。10:20か10:35発が目安。<br><span>1915番は連休中に礁溪止まりになることがあるので、宜蘭直行の1916番に乗る。悠遊卡か窓口で乗車券を。</span></p>
         <details class="tt"><summary>時刻表（台北轉運站発・目安）</summary>
           <div class="times"><span>9:40</span><span>10:00</span><span class="pick">10:20</span><span class="pick">10:35</span><span>10:50</span><span>11:05</span></div>
           <p>連休中は臨時便が出ることもある。最新は葛瑪蘭客運の公式サイトか現地の表示で確認。</p>
@@ -442,7 +443,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg taxi">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚕 タクシー 約20分</span>
+        <span class="chip">🚕 タクシー 約20分</span><span class="fare">約300〜400元/台</span>
         <p class="how">「金車噶瑪蘭威士忌酒廠」と伝える。</p>
         <div class="links"><a href="https://www.google.com/maps/dir/?api=1&origin=宜蘭轉運站&destination=金車噶瑪蘭威士忌酒廠&travelmode=driving" target="_blank" rel="noopener">経路を開く</a></div>
       </div>
@@ -464,7 +465,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg taxi">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚕 タクシー 約20分</span>
+        <span class="chip">🚕 タクシー 約20分</span><span class="fare">約300〜400元/台</span>
         <p class="how">蒸留所 → 宜蘭駅（宜蘭車站）。<br><span>帰りの車は売店で呼んでもらうと確実。</span></p>
       </div>
     </li>
@@ -478,7 +479,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg tra">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚆 台鉄（自強号）</span>
+        <span class="chip">🚆 台鉄（自強号）</span><span class="fare">206元（指定席）</span>
         <p class="how">宜蘭駅 → 瑞芳駅。約1時間〜1時間20分。15:00頃の便が目安。<br><span>日曜午後の台北方面は混むので、指定席を事前予約（準備タブ参照）。</span></p>
       </div>
     </li>
@@ -489,7 +490,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg taxi">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚕 タクシー 約15分</span>
+        <span class="chip">🚕 タクシー 約15分</span><span class="fare">約205元/台</span>
         <p class="how">駅前から九份老街へ。<br><span>バスなら駅前の乗り場から788・827・856・965・1062など、「九份老街」で下車。</span></p>
       </div>
     </li>
@@ -510,7 +511,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg taxi">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚕 タクシー / 🚌 バス 約15分</span>
+        <span class="chip">🚕 タクシー / 🚌 バス 約15分</span><span class="fare">タクシー約205元/台・バス15元</span>
         <p class="how">九份 → 瑞芳駅へ下る。<br><span>965・1062は台北直通もあるが、立ち乗り不可で日曜夜は長い行列になりやすい。休日の最終は20:40頃。電車経由のほうが確実。</span></p>
       </div>
     </li>
@@ -521,7 +522,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg tra">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚆 台鉄</span>
+        <span class="chip">🚆 台鉄</span><span class="fare">73元</span>
         <p class="how">瑞芳駅 → 台北駅。約45〜60分。<br><span>区間車なら悠遊卡でそのまま乗れる。</span></p>
       </div>
     </li>
@@ -529,7 +530,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
       <div class="time">21:00</div><div class="rail"></div>
       <div class="body">
         <h3>台北駅 → ホテル</h3>
-        <p>タクシー約5分。元気が残っていれば寧夏夜市で夜食。</p>
+        <p>タクシー約5分（約100〜130元/台）。元気が残っていれば寧夏夜市で夜食。</p>
       </div>
     </li>
   </ol>
@@ -551,7 +552,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg taxi">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚕 タクシー 約10分</span>
+        <span class="chip">🚕 タクシー 約10分</span><span class="fare">約150〜180元/台</span>
         <p class="how">龍山寺へ。<br><span>MRTなら北門→西門（緑線）、西門→龍山寺（青線）。</span></p>
       </div>
     </li>
@@ -566,7 +567,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg m-blue">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚇 MRT 青線（板南線）</span>
+        <span class="chip">🚇 MRT 青線（板南線）</span><span class="fare">20元</span>
         <p class="how">龍山寺駅 → 西門駅。1駅。<br><span>徒歩でも約15分。</span></p>
       </div>
     </li>
@@ -583,7 +584,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     </li>
     <li class="row leg taxi">
       <div class="time"></div><div class="rail"></div>
-      <div class="body"><span class="chip">🚕 タクシー 約10分</span><p class="how">ホテルへ戻る。</p></div>
+      <div class="body"><span class="chip">🚕 タクシー 約10分</span><span class="fare">約130〜170元/台</span><p class="how">ホテルへ戻る。</p></div>
     </li>
     <li class="row stop">
       <div class="time">13:30</div><div class="rail"></div>
@@ -592,7 +593,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg taxi">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚕 タクシー 約5分</span>
+        <span class="chip">🚕 タクシー 約5分</span><span class="fare">約100元/台</span>
         <p class="how">空港MRT「台北車站」駅（A1）へ。<br><span>A1は台北駅の北門寄り、地上の駅舎とは別の入口。</span></p>
         <div class="links"><a href="https://www.google.com/maps/search/?api=1&query=機場捷運台北車站A1" target="_blank" rel="noopener">地図</a></div>
       </div>
@@ -604,7 +605,7 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li class="row leg m-air">
       <div class="time"></div><div class="rail"></div>
       <div class="body">
-        <span class="chip">🚇 桃園空港MRT 快速（直達車）</span>
+        <span class="chip">🚇 桃園空港MRT 快速（直達車）</span><span class="fare">150元</span>
         <p class="how">A1 → A12 空港第1ターミナル。約35分、150元。<br><span>紫の「直達車」に乗る。各停の「普通車」は時間がかかる。悠遊卡かJCBなどのタッチ決済で改札を通れる。</span></p>
       </div>
     </li>
@@ -692,6 +693,15 @@ footer{color:var(--muted);font-size:.78rem;padding:0 0 30px}
     <li>JCBも使える。台北MRTと桃園空港MRTは、JCBのタッチ決済で改札を通れる（2026年7月から）。ただし悠遊卡の乗り継ぎ割引などは付かない。</li>
     <li>1915番バスや台鉄の区間車は悠遊卡で。必ず1枚は持っておく。</li>
     <li>Visaかマスターカードもあれば、お守りに一緒に持っていく。</li>
+  </ul>
+
+  <h3 class="sec">交通費の目安</h3>
+  <ul class="rules">
+    <li>各区間の料金は、乗り物の名前の横に小さく書いてある。電車・バスは1人あたり、タクシーは1台あたり。</li>
+    <li>電車・バスの合計は1人約850元（MRTは距離制なので、±5元ほど違うことがある）。</li>
+    <li>タクシーの合計は1台約1,900元で、3人で割ると1人約650元。</li>
+    <li>交通費は全部で1人約1,500元（約7,500円）が目安。</li>
+    <li>台北のタクシーは初乗り85元（1.25kmまで）、以降200mごとに5元。23時〜翌6時は1回20元の加算。</li>
   </ul>
 
   <h3 class="sec">電源</h3>
